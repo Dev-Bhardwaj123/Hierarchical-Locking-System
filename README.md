@@ -7,12 +7,10 @@ In many real-world applications, data is organized in a hierarchical structure (
 This project implements an optimized Hierarchical Locking System using an m-ary tree, supporting the following operations:
 
 1️⃣ lock(node, userId) → Grants exclusive access to a node if:
-
-The node is not already locked.
-No ancestor or descendant of the node is locked.
+  The node is not already locked.
+  No ancestor or descendant of the node is locked.
 2️⃣ unlock(node, userId) → Unlocks a node if:
-
-The same user previously locked it.
+  The same user previously locked it.
 3️⃣ upgradeLock(node, userId) → Upgrades a user’s lock to an ancestor node if:
 
 The ancestor has at least one locked descendant.
@@ -24,9 +22,9 @@ All locked descendants are locked by the same user.
 4️⃣ Tree Nodes: Unique node names representing the hierarchy.
 5️⃣ Queries:
 
-1 nodeName userId → Lock
-2 nodeName userId → Unlock
-3 nodeName userId → UpgradeLock
+  1 nodeName userId → Lock
+  2 nodeName userId → Unlock
+  3 nodeName userId → UpgradeLock
 
 🔹 Example Input & Output
 Input:
